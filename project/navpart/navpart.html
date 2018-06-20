@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+<div class="other-wrap">
+    <div class="top-header">
+        <div class="contain w">
+            <h1 class="back"><a href="../../index.html"></a></h1>
+            <div class="theme">为您准备最简单的快乐!</div>
+        </div>
+    </div>
+</div>
+
+<header class="nav-wrap">
+    <div class="header clear-fixed">
+        <h1 class="h1"><a href="javascript:;">旅游</a></h1>
+        <div class="_header"><a href="javascript:;">加入行程</a>
+
+        </div>
+        <div class="-header" ><a href="javascript:;">收藏</a>
+
+        </div>
+    </div>
+    <div class="content clear-fixed">
+        <div class="content-left">
+            <img src="http://pic3.beibaotu.com/item_images/000/00/05/20/3128867_b.jpg" alt="">
+        </div>
+        <div class="content-right">
+            <ul class="nav clear-fixed">
+            <li><a href="javascript:;">双廊</a></li>
+            <li><a href="javascript:;">大理古城</a></li>
+            <li><a href="javascript:;">洱海风景</a></li>
+            <li><a href="javascript:;">大理崇圣</a></li>
+            <li><a href="javascript:;">大理蝴蝶</a></li>
+            <li><a href="javascript:;">丽江</a></li>
+            <li><a href="javascript:;">昆明</a></li>
+            <li><a href="javascript:;">泸沽湖</a></li>
+            </ul>
+            <span class="foot"><a href="javascript:;">我要补充信息</a></span>
+        </div>
+    </div>
+</header>
+<section class="section">
+    <h2 class="h2"><a href="javascript:;">附近景点推荐</a></h2>
+        <ul class="list clear-fixed">
+            <li>
+                <img src="http://s0.beibaotu.com/files/items/国内景点/云南/大理/双廊/3_170.jpg" alt="">
+                <span>双廊</span>
+            </li>
+            <li>
+                <img src="http://pic3.beibaotu.com/item_images/001/01/22/89/3128603_m.jpg" alt="">
+                <span>大理古城</span>
+            </li>
+            <li>
+                <img src="http://s0.beibaotu.com/files/items/国内景点/云南/大理/洱海风景区/2_170.jpg" alt="">
+                 <span>洱海风景区</span>
+            </li>
+            <li>
+                <img src="http://s0.beibaotu.com/files/items/国内景点/云南/大理/苍山/1_170.jpg" alt="">
+                <span>苍山</span>
+            </li>
+            <li>
+                <img src="http://s0.beibaotu.com/files/items/国内景点/云南/大理/大理崇圣寺三塔/2_170.jpg" alt="">
+                <span>大理崇圣寺三塔</span>
+            </li>
+            <li>
+                <img src="http://pic2.beibaotu.com/item_images/001/01/20/00/9025578_m.jpg" alt="">
+                <span>大理蝴蝶谷</span>
+            </li>
+        </ul>
+</section>
+<h3>大理精品行程</h3>
+<footer class="footer">
+    <div class="nav-wrap">
+        <div class="footer-div">
+            <div class="footer-div1">
+                <p><a href="javascript:;">大理6日自驾游</a></p>
+                <span>长江花园-才村井巷精品客栈-苍山-大理洋人街-大理古城-才村井巷精品客栈-大理才村井巷精品客栈-才村井巷精品客栈-海舌-长江花园</span>
+            </div>
+            <div class="footer-div1">
+                <p><a href="javascript:;">大理到雨崩</a></p>
+                <span>大理古城-大理-喜洲镇-喜洲白族古建筑群-喜洲-才村村-大理崇圣寺三塔-香格里拉-独克宗古城-大理</span>
+            </div>
+            <div class="footer-div1">
+                <p><a href="javascript:;">云南8日（昆明-大理-丽江-版纳）</a></p>
+                <span>北京首都国际机场-洱海桃源码头-蝴蝶泉-大理崇圣寺三塔-大理古城-住宿-大理古城-大理机场-西双版纳嘎洒国际机场-曼听公园-北京首都国际机场</span>
+            </div>
+            <div class="footer-div1">
+                <p><a href="javascript:;">云南7日（昆明-大理-丽江-版纳）</a></p>
+                <span>高崎-龙龛生态园-洱海桃源码头-蝴蝶泉-大理崇圣寺三塔-大理古城-大理机场-西双版纳嘎洒国际机场-曼听公园-高崎</span>
+            </div>
+        </div>
+        <div class="preNext">
+            <span>&lt;</span>
+            <span>&gt;</span>
+        </div>
+    </div>
+</footer>
+<script src="js/jquery-3.3.1.js"></script>
+<script>
+   $(function () {
+       play();
+       autoPlay();
+       addEvent();
+       var currentIndex = 0;
+       function play(){
+           $(".footer .footer-div").animate({
+               left : -currentIndex * $(".footer .footer-div .footer-div1").width()
+           }, 400, function(){
+               if(currentIndex == 4){
+                   currentIndex = 1;
+               }else if(currentIndex == 0){
+                   currentIndex = 3;
+               }
+               $(this).css("left", -currentIndex * $(".footer .footer-div .footer-div1").width());
+           })
+       }
+       var id;  // 定时器的id
+       // 自动播放
+       function autoPlay(){
+           id = setInterval(function (){
+               currentIndex++;
+
+               play();
+           }, 2000)
+       }
+       function addEvent() {
+           $(".footer").mouseenter(function (){
+               clearInterval(id);
+           }).mouseleave(function (){
+               autoPlay();
+           })
+           $(".preNext span:eq(1)").click(function (){
+               if($(".footer-div:animated").length != 0) return;
+               currentIndex++;
+               play();
+           })
+           $(".preNext span:eq(0)").click(function (){
+               // 查看是否在执行动画
+               if($(".footer-div:animated").length != 0) return;
+               currentIndex--;
+               play();
+           })
+       }
+   })
+</script>
+</body>
+</html>

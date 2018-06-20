@@ -1,0 +1,468 @@
+/*公共部分样式开始*/
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.wrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+/*公共部分样式结束*/
+/*header部分样式结束*/
+.header-wrap {
+  width: 100%;
+  height: 100px;
+  background-image: linear-gradient(to right, rgba(253, 242, 222, 0.3), #7A825D);
+}
+.header {
+  width: 1226px;
+  height: 100px;
+  margin: 0 auto;
+  background: url("../img/headerbg.jpg") no-repeat 0px -60px;
+  background-size: 100%;
+  position: fixed;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+}
+.header h1 {
+  width: 200px;
+  margin-left: 130px;
+  text-align: center;
+  margin-top: 10px;
+}
+.header h1 .home {
+  font-size: 14px;
+}
+.header .header-list {
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+}
+.header .header-list li {
+  float: left;
+  margin-right: 60px;
+}
+.header .header-list li a {
+  color: black;
+  font-size: 16px;
+}
+.header .header-list li a:hover {
+  font-size: 20px;
+}
+/*header部分样式结束*/
+/*content部分样式开始*/
+.content {
+  width: 1226px;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+}
+.hot {
+  position: relative;
+  margin-top: 10px;
+  height: 500px;
+}
+.hot .hot1 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 300px;
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+  color: #484848;
+  background-color: antiquewhite;
+}
+.hot .hot1 h2 {
+  font-size: 20px;
+}
+.hot .hot1:hover {
+  box-shadow: 0px 10px 30px gray;
+}
+.hot .hot2 {
+  width: 100%;
+  position: absolute;
+  top: 100px;
+  overflow: hidden;
+}
+.hot .hot2 .hot-list {
+  width: 2500px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.hot .hot2 .hot-list li {
+  width: 400px;
+  position: relative;
+}
+.hot .hot2 .hot-list li img {
+  width: 100%;
+  transition: transform 1s;
+}
+.hot .hot2 .hot-list li img:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+.hot .hot2 .hot-list li .hot-content {
+  text-align: center;
+  margin-top: 10px;
+}
+.hot .hot2 .hot-list li .hot-content span {
+  word-break: keep-all;
+  font-weight: bold;
+}
+.hot .hot2 .hot-list li .hot-content span:nth-of-type(1) {
+  font-size: 12px;
+}
+.hot .hot2 .hot-list li .hot-content span:nth-of-type(2) {
+  font-size: 16px;
+}
+.hot .hot2 .hot-list li .hot-content span:nth-of-type(3) {
+  font-size: 12px;
+}
+.hot .hot2 .more {
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  top: 30%;
+  font-size: 50px;
+  color: gray;
+}
+.hot .hot2 .more span {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+}
+.hot .hot2 .more span.lt {
+  left: 0px;
+  display: none;
+}
+.hot .hot2 .more span.gt {
+  right: 0px;
+}
+.experience {
+  width: 100%;
+  height: 620px;
+  position: relative;
+}
+.experience .exHeader {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 300px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  color: #484848;
+  background-color: antiquewhite;
+}
+.experience .exHeader:hover {
+  box-shadow: 0px 10px 30px gray;
+}
+.experience .experience1 {
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  color: white;
+  background: url("../img/bg.jpg") no-repeat center;
+  background-size: 100% 100%;
+}
+.experience .experience1 .moving {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 50px auto 0;
+  display: block;
+  font-size: 36px;
+  width: 400px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+.experience .experience1 .ex-content {
+  margin-top: 100px;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  text-align: center;
+}
+.experience .experience1 .ex-content .left,
+.experience .experience1 .ex-content .right {
+  position: relative;
+  width: 500px;
+  height: 100%;
+}
+.experience .experience1 .ex-content .left .item,
+.experience .experience1 .ex-content .right .item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: none;
+}
+.experience .experience1 .ex-content .left .item.active,
+.experience .experience1 .ex-content .right .item.active {
+  display: block;
+}
+.experience .experience1 .ex-content .left .item .customer,
+.experience .experience1 .ex-content .right .item .customer {
+  display: block;
+  font-size: 24px;
+  text-align: center;
+  margin: 10px 0 25px;
+}
+.experience .experience1 .ex-content .left .item img,
+.experience .experience1 .ex-content .right .item img {
+  display: block;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.experience .experience1 .ex-content .left .item .name,
+.experience .experience1 .ex-content .right .item .name,
+.experience .experience1 .ex-content .left .item .data,
+.experience .experience1 .ex-content .right .item .data,
+.experience .experience1 .ex-content .left .item p,
+.experience .experience1 .ex-content .right .item p {
+  display: block;
+  font-size: 12px;
+}
+.experience .experience1 .ex-content .left .item .name,
+.experience .experience1 .ex-content .right .item .name {
+  margin-top: 150px;
+}
+.experience .experience1 .ex-content .left .item p,
+.experience .experience1 .ex-content .right .item p {
+  width: 400px;
+  margin: 20px 0 0 50px;
+}
+.experience .experience1 .ex-content .left ul,
+.experience .experience1 .ex-content .right ul {
+  width: 260px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 10px;
+}
+.experience .experience1 .ex-content .left ul li,
+.experience .experience1 .ex-content .right ul li {
+  float: left;
+  width: 40px;
+  height: 6px;
+  border-radius: 2px;
+  background-color: white;
+  margin-right: 10px;
+}
+.experience .experience1 .ex-content .left ul li.active,
+.experience .experience1 .ex-content .right ul li.active {
+  background-color: deeppink;
+}
+.experience .experience1 .ex-content .middle-line {
+  border-right: solid 1px #7d7d7d;
+  height: 237px;
+  position: absolute;
+  right: 50%;
+  top: 163px;
+}
+.experience .experience1 .ex-content .right {
+  width: 500px;
+  height: 100%;
+}
+.story {
+  width: 100%;
+  height: 600px;
+  margin-top: 10px;
+  text-align: center;
+  position: relative;
+}
+.story h2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 350px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  color: #484848;
+  background-color: antiquewhite;
+}
+.story h2:hover {
+  box-shadow: 0px 10px 30px gray;
+}
+.story .story-content {
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  height: 500px;
+  line-height: 500px;
+  background: url("../img/content-01.jpg") no-repeat center;
+}
+.story .story-content:hover a {
+  opacity: 1;
+}
+.story .story-content:hover a:nth-child(2) {
+  top: 260px;
+  left: 500px;
+}
+.story .story-content:hover a:nth-child(3) {
+  top: 260px;
+  right: 500px;
+}
+.story .story-content img {
+  width: 800px;
+  height: 91px;
+}
+.story .story-content a {
+  display: block;
+  width: 100px;
+  height: 30px;
+  border: 1px solid black;
+  color: white;
+  border-radius: 5px;
+  position: absolute;
+  line-height: 30px;
+  opacity: 0;
+  transition: all 2s;
+}
+.story .story-content a:nth-child(2) {
+  bottom: 10px;
+  left: 10px;
+}
+.story .story-content a:nth-child(3) {
+  bottom: 10px;
+  right: 10px;
+}
+.safeguard {
+  width: 100%;
+  height: 320px;
+  position: relative;
+  margin-top: 20px;
+}
+.safeguard h2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 350px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  color: #484848;
+  background-color: antiquewhite;
+}
+.safeguard h2:hover {
+  box-shadow: 0px 10px 30px gray;
+}
+.safeguard .safeguard-content {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 1200px;
+  height: 200px;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+}
+.safeguard .safeguard-content li {
+  width: 250px;
+  height: 200px;
+  position: relative;
+  border-right: 1px solid navajowhite;
+}
+.safeguard .safeguard-content li span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  display: block;
+  width: 188px;
+  height: 152px;
+  background: url("../img/xz_index.png") no-repeat;
+}
+.safeguard .safeguard-content li span.online {
+  background-position: 0 -162px;
+}
+.safeguard .safeguard-content li span.safe {
+  background-position: 0 -324px;
+}
+.safeguard .safeguard-content li span.credit {
+  background-position: 0 -486px;
+}
+.safeguard .safeguard-content li a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9;
+}
+.safeguard .safeguard-content li a:hover {
+  box-shadow: 0 0 8px #bbb;
+}
+.safeguard .safeguard-content li:last-child {
+  border-right: none;
+}
+/*content部分样式结束*/
+/*滚动条部分开始*/
+.outer {
+  width: 15px;
+  height: 100%;
+  background-color: darkgrey;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.outer .inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: gray;
+}
+/*滚动条部分结束*/

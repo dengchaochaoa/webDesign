@@ -1,0 +1,403 @@
+/*公共样式*/
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+.clearfix::after{
+    content:"";
+    display:block;
+    clear:both;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.wrap{
+    width: 100%;
+    height: 100%;
+    position:relative;
+}
+a{
+    text-decoration:none;
+    color:black;
+}
+/*头部区域*/
+.header{
+    width: 100%;
+    height: 100px;
+    background-color:rgba(149,185,167,0.4);
+    position:fixed;
+    z-index: 1000;
+}
+.header .contain{
+    height: 100%;
+    margin:0 auto;
+    display:flex;
+    width: 1226px;
+    background-color:rgba(149,185,167,0.4);
+    justify-content:space-around;
+    padding-top: 20px;
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+    perspective:1500px;
+}
+.header .contain h1.logo{
+    width: 210px;
+    height:60px;
+    line-height:60px;
+    text-indent:100000px;
+    background:url("../headerImg/logo1.png") no-repeat;
+}
+
+/*头部搜索区域*/
+.header .contain .search_part{
+    height: 60px;
+    line-height:60px;
+    position:relative;
+    border:1px solid #000;
+    transition:transform 0.6s;
+}
+.header .contain .search_part .search{
+    display:block;
+    width: 190px;
+    padding-left:10px;
+    padding-right:43px;
+    height: 58px;
+    border:1px solid #dfdfdf;
+    float:left;
+    outline:none;
+    font-size:16px;
+}
+.header .contain .search_part a.submit {
+    display:block;
+    border:1px solid #dfdfdf;
+    width: 50px;
+    height: 58px;
+    float:right;
+    outline:none;
+    background:url("../headerImg/search.png") no-repeat center;
+}
+.header .contain .search_part a.submit:hover{
+    background:url("../headerImg/search_change1.png") no-repeat center;
+    background-color: #d7c492;
+}
+.header .contain .search_part #search_help{
+    width: 243px;
+    position:absolute;
+    top:60px;
+    left:0;
+    z-index:5;
+    border:1px solid #d7c492;
+    display:none;
+}
+.header .contain .search_part #search_help p{
+    font-size:20px;
+    line-height:40px;
+    padding:0 10px;
+    background-color:rgba(229,232,224,0.8);
+}
+.header .contain .search_part #search_help p:hover{
+    background-color: burlywood;
+}
+/*头部导航区域*/
+.header .contain .header-nav{
+    height: 60px;
+}
+.header .contain .header-nav li{
+    float:left;
+    margin-left: 1px;
+}
+.header .contain .header-nav li a{
+    display: block;
+    width: 120px;
+    height: 60px;
+    text-align: center;
+    line-height:60px;
+    font-size:18px;
+    transition:background-color 1s,font-size 1s;
+}
+.header .contain .header-nav li a:hover{
+    background-color:#aad6d4;
+    font-size:20px;
+    color:white;
+}
+
+/*中间图片区域*/
+.wrap .content{
+    width: 100%;
+    height: 100%;
+    background:url("../headerImg/background.jpg") no-repeat center;
+    background-size:100% 100%;
+}
+.wrap .content .pics{
+    transform:translate(0px);
+    box-sizing: border-box;
+    width: 300%;
+    height: 100%;
+    padding-top: 80px;
+    transition:transform 1s;
+    transform-style: preserve-3d;
+    perspective:5500px;
+}
+.wrap .content .pics > ul,.wrap .content .pics > div{
+    float:left;
+    box-sizing: border-box;
+    position: relative;
+    width:calc(100%/3);
+    height: 100%;
+    padding-top:20px;
+    transform-style: preserve-3d;
+    perspective: 2500px;
+
+}
+/*添加的内容*/
+.wrap .content .pics .first-page{
+    height: 600px;
+    position: relative;
+}
+.wrap .content .pics .first-page .turn-pic{
+    width: 1226px;
+    height: 100%;
+    margin:0 auto;
+    position:relative;
+}
+.wrap .content .pics .first-page .turn-pic li{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.wrap .content .pics .first-page .turn-pic li img{
+    width: 100%;
+    height: 100%;
+}
+.wrap .content .pics .more{
+    position:absolute;
+    right: 80px;
+    bottom: 50px;
+    width: 180px;
+    height: 50px;
+    line-height:50px;
+    font-size:20px;
+    color:black;
+    padding-left:10px;
+    background:url("../headerImg/toright.jpg") no-repeat right center;
+    background-size:50px 50px;
+    background-color:white;
+    border-radius:0 25px 25px 0;
+    animation:changeBC 2s infinite;
+    z-index:200;
+}
+@keyframes changeBC{
+    0%{
+        background-color:white;
+    }
+    50%{
+        background-color: darkcyan;
+    }
+    100%{
+        background-color:white;
+    }
+}
+
+.wrap .content .pics .second-page .center{
+    width: 1226px;
+    height: 100%;
+    margin:0 auto;
+    position:relative;
+    background:url("../headerImg/centerbj.jpg") no-repeat center;
+    background-size:100% 100%;
+}
+.wrap .content .pics .second-page .center .back{
+    position:absolute;
+    left:0;
+    top:0;
+    background-color:transparent;
+}
+.wrap .content .pics .second-page .center li{
+    position:absolute;
+    height:300px;
+    transition: transform 1s;
+}
+.wrap .content .pics .second-page .center li img{
+    width: 100%;
+}
+
+.wrap .content .third-page .service {
+    width: 1226px;
+    text-align: center;
+    margin:20px auto;
+}
+.wrap .content .third-page .service .top{
+    margin-bottom: 20px;
+    color:midnightblue;
+    font-weight: normal;
+    letter-spacing:2px;
+}
+.wrap .content .third-page .service .line{
+    margin: 10px auto 6px;
+    border-width: 2px;
+    width: 80px;
+    position: relative;
+    min-height: 2px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-bottom: 2px solid #4b5779;
+}
+.wrap .content .third-page .service .row{
+    width: 100%;
+    color: #4b5779;
+    margin:0 auto;
+
+}
+.wrap .content .third-page .service .row [class^= col]{
+    box-sizing: border-box;
+    position:relative;
+    width: 22%;
+    padding-top:20px;
+    height: 420px;
+    border:1px solid #4b5779;
+    border-radius:10px;
+    margin: 1.5%;
+    float:left;
+}
+.wrap .content .third-page .service .row [class^= col] h3{
+    margin-bottom:10px;
+}
+.wrap .content .third-page .service .row [class^= col] img{
+    width: 100%;
+    height:160px;
+}
+.wrap .content .third-page .service .row [class^= col] p{
+    width: 80%;
+    margin:10px auto;
+}
+.wrap .content .third-page .service .row [class^= col] p a{
+    width: 100px;
+    height: 30px;
+    line-height:30px;
+    text-align:center;
+    display:block;
+    border:1px solid #4b5779;
+    border-radius:5px;
+    position:absolute;
+    bottom:10px;
+    left: 50%;
+    transform:translateX(-50%);
+    color:#4b5779;
+}
+.wrap .content .third-page .service [class^=col].hover {
+    z-index: 100;
+    background-color:cadetblue;
+    transform: scale(1.1, 1.1);
+    border: none;
+    box-shadow: 3px 3px 3px cadetblue;
+}
+.wrap .content .third-page .service [class^=col]{
+    transition: all 0.3s;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 20px;
+}
+.wrap .content .third-page .service [class^=col].hover h3 {
+    color: white;
+}
+.wrap .content .third-page .service [class^=col].hover p {
+    color: white;
+}
+.wrap .content .third-page .service [class^=col].hover a {
+    background-color:cadetblue;
+    border: 1px solid white;
+}
+.wrap .content .third-page .service [class^=col].hover a:hover {
+    color:cadetblue;
+    background-color: white;
+}
+
+/*底部导航区域*/
+.wrap .footer{
+    width: 840px;
+    margin-top:-140px;
+    bottom:0;
+    position: fixed;
+    z-index:100;
+    margin-left:50%;
+    transform:translate(-50%);
+}
+.wrap .footer .sub-nav{
+    height: 140px;
+    width: 840px;
+}
+.wrap .footer .sub-nav li{
+    background-color: transparent;
+    box-sizing: border-box;
+    margin-right:10px;
+    width: 200px;
+    height: 130px;
+    float:left;
+    position: relative;
+    overflow: hidden;
+}
+.wrap .footer .sub-nav li img{
+    display:block;
+    width: 100%;
+    height: 100%;
+    transition:transform 1s;
+}
+.wrap .footer .sub-nav li .mask{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left:0;
+    top:0;
+    font-size:15px;
+    color:white;
+    text-align:center;
+    line-height:130px;
+    background-color:rgba(10,10,10,0.4);
+}
+
+/*水平进度条*/
+.wrap .progress{
+    position:fixed;
+    bottom:0;
+    width: 100%;
+    height: 8px;
+    background-color:floralwhite;
+}
+.wrap .progress span{
+    display:block;
+    height:8px;
+    background-color: cadetblue;
+}
+
+/*左右翻页*/
+.wrap .page-change{
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    position:fixed;
+    bottom: 120px;
+    padding-left:20px;
+    padding-right:20px;
+}
+.wrap .page-change>div{
+    box-sizing: border-box;
+    width: 50px;
+    height: 50px;
+    border:25px solid transparent;
+    transition: opacity 0.6s;
+}
+.wrap .page-change .prev{
+    border-right:25px solid darkgrey;
+    float:left;
+}
+.wrap .page-change .next{
+    border-left:25px solid darkgrey;
+    float:right;
+}

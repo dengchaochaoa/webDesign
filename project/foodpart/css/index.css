@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    background:url("../img/body-bg.png") no-repeat center fixed;
+}
+ul{
+    list-style: none;
+}
+
+.clearfix{*zoom: 1;}
+.clearfix:after{content: "";display: block;clear: both;}
+
+
+a{
+    text-decoration: none;
+}
+
+
+
+
+.wrap{
+    margin:auto;
+    width:1260px;
+    background-color:#fff9ed;
+}
+.header{
+    width: 100%;
+  /*  background:url("../img/true.jpg") no-repeat ;
+    background-size:1226px 300px;*/
+}
+.logo{
+
+}
+.menu{
+    border-top:1px solid #EBE4D6
+}
+
+.top-nav li {
+    color: #FBFAFA;
+    float: left;
+    width: 16.6666%;
+
+    text-align: center;
+    line-height: 20px;
+}
+.top-nav li a{
+    display: block;
+    color: #000;
+    padding: 20px 0 20px;
+    height: auto ;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Patua One', cursive;
+    text-transform: uppercase;
+}
+.top-nav li.active a{
+    color:#fff;
+    background-color: black;
+}
+
+/*轮播图*/
+#lbt {
+    width: 1260px;
+    height: 600px;
+    overflow: hidden;
+    position:relative;
+
+}
+
+#lbt #imgs {
+    width: 800%;
+    height: 100%;
+    position:absolute;
+    left: 0;
+    top: 0;
+}
+
+#lbt #imgs img {
+    width: 1260px;
+    height: 600px;
+    float: left;
+}
+
+ #lbt #indicator{
+     width: 300px;
+     height: 80px;
+    /* background-color: #374ce1;*/
+     border-radius: 10px;
+     position: absolute;
+     bottom: 10px;
+     left: 0;
+     right: 0;
+     margin: auto;
+ }
+#lbt #indicator span {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 50%;
+    float: left;
+
+}
+
+#lbt #indicator span:nth-child(1) {
+    background-color: #ff5b6c;
+}
+
+#lbt #preNext {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+#lbt #preNext span {
+    position: absolute;
+    font-size: 60px;
+    line-height: 50px;
+    background-color: gray;
+    opacity: 0;
+}
+#lbt #preNext span:nth-child(2) {
+    right: 0px;
+}
+
+#lbt:hover #preNext span {
+    opacity: 0.8;
+}
+
+#lbt #preNext span:hover {
+   opacity: 1;
+    cursor: pointer;
+}
+
+/*美食详情介绍*/
+.main-top {
+
+/*background-color: #a08d61;*/
+}
+.main-top h1{
+   /* background-color: #de5450;*/
+}
+.main-top .item{
+    text-align: center;
+    margin-top:40px;
+
+
+}
+.main-top .item li{
+    width: 300px;
+    height:260px;
+    margin:5px;
+    float:left;
+   /* border:2px solid black;*/
+}
+.main-top .item img:hover{
+    transition:transform 1s;
+    transform:scale(1.2);
+}
+
+.main-top .item li img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.main-top .item li h2{
+  margin-top: 20px;
+}

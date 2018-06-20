@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+<script src="myJs.js"></script>
+<style>
+
+* { box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+
+/*header style*/
+.header-wrap{
+    width: 100%;
+}
+.header{
+    width: 100%;
+    height: 100px;
+    background-color:rgba(197,195,195,0.6);
+    transition:background-color 1s;
+}
+.header:hover{
+    background-color:rgba(240,231,231,0.6);
+}
+.header .contain{
+    height: 100%;
+    margin:0 auto;
+    display:flex;
+    width: 1226px;
+    justify-content:space-between;
+    padding-top: 20px;
+    box-sizing: border-box;
+    background-color:#c5c3c3;
+    transition:background-color 1s;
+}
+.header .contain:hover{
+    background-color:#f0e7e7
+}
+.header .contain h1.back a{
+    display:block;
+    width: 160px;
+    height:40px;
+    line-height:40px;
+    background:url("img/bg.png") no-repeat center;
+    background-size:90px 40px;
+}
+.header .contain .theme{
+    width: 60%;
+    height:60px;
+    font-size:35px;
+    letter-spacing: 20px;
+    color:dimgray;
+}
+
+
+.grid {
+    background: black;
+}
+
+/* clear fix */
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+    width: 25%;
+}
+
+
+.grid-item {
+    float: left;
+    cursor:pointer;
+}
+ /*鼠标悬停过渡部分*/
+.grid-item img {
+    display: block;
+    max-width: 100%;
+    filter: grayscale(100%);
+}
+.grid-item img:hover{
+    display: block;
+    max-width: 100%;
+    transition: filter 1.5s;
+    filter: grayscale(0%);
+}
+/*点击放大缩小*/
+.big {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    background-color: whitesmoke;
+    color: white;
+    transform: scale3d(0,0,1);
+    transition: transform 0.5s;
+    transform-origin: 10px 10px;
+}
+.big .big_header{
+    position: relative;
+    height: 1rem;
+    text-align: center;
+    line-height: 1rem;
+}
+.big .big_header span{
+    position: absolute;
+    line-height: 0.8rem;
+    width: 0.8rem;
+    height: 8px;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: black;
+    border-radius: 50%;
+    font-size: 0.6rem;
+}
+.big center{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.big header{
+    display: none;
+}
+</style>
+</head>
+<body>
+<div class="header-wrap">
+    <div class="header">
+        <div class="contain w">
+            <h1 class="back"><a href="../../index.html"></a></h1>
+            <div class="theme">带您走进更纯真的云南!</div>
+        </div>
+    </div>
+</div>
+
+<div class="grid">
+    <div class="grid-sizer"></div>
+    <div class="grid-item">
+        <img src="img/1.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/2.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/3.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/4.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/5.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/6.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/7.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/8.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/10.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/11.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/12.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/13.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/14.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/16.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/17.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/18.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/19.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/20.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/21.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/22.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/23.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/24.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/25.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/26.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/27.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/28.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/29.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/30.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/31.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/32.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/33.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/34.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/35.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/36.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/37.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/38.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/39.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/40.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/41.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/42.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/43.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/44.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/45.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/47.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/49.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/51.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/52.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/53.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/54.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/56.jpg" />
+    </div>
+    <div class="grid-item">
+        <img src="img/57.jpg" />
+    </div>
+    <div class="big">
+        <header class="big_header">
+            <h2>大图预览</h2>
+            <span class="close"> X </span>
+        </header>
+        <canvas ></canvas>
+    </div>
+</div>
+
+</body>
+<script>
+//流式布局
+var grid = document.querySelector('.grid');
+
+var msnry = new Masonry( grid, {
+    itemSelector: '.grid-item',
+    columnWidth: '.grid-sizer',
+    percentPosition: true
+});
+// imagesLoaded( grid ).on( 'progress', function() {
+//     msnry.layout();
+// });
+//处理放大效果
+// ($("img").click(function (myEvent){
+//
+// }))
+
+</script>
+</html>

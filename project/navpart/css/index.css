@@ -1,0 +1,261 @@
+@charset "utf-8";
+/*公共样式*/
+* {
+  padding: 0;
+  margin: 0;
+}
+ul {
+  list-style: none;
+}
+.clear-fixed::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+/*公共样式*/
+/*wrap开始*/
+.other-wrap{
+	width: 100%;
+}
+.top-header{
+  width: 100%;
+  height: 100px;
+  background-color:rgba(169,182,223,0.6);
+}
+.top-header .contain{
+  height: 100%;
+  margin:0 auto;
+  display:flex;
+  width: 1226px;
+  justify-content:space-between;
+  padding-top: 20px;
+  box-sizing: border-box;
+  background-color:#a9b6df;
+}
+.top-header .contain h1.back a{
+  display:block;
+  width: 210px;
+  height:60px;
+  line-height:60px;
+  background:url("../img/back.png") no-repeat center;
+  background-size:121px 60px;
+}
+.top-header .contain .theme{
+  width: 60%;
+  height:60px;
+  font-size:35px;
+  letter-spacing: 20px;
+  color:midnightblue;
+}
+
+.nav-wrap {
+  width: 1226px;
+  height: 500px;
+  margin: auto;
+}
+.nav-wrap .header{
+  width: 100%;
+  height: 30px;
+  margin-bottom: 20px;
+}
+.nav-wrap .header h1 {
+  margin-right: 14px;
+  float: left;
+}
+.nav-wrap .header h1 a:hover {
+  color: blue;
+}
+.nav-wrap .header ._header,
+.nav-wrap .header .-header {
+  float: right;
+}
+.nav-wrap .header ._header {
+  margin-top: 12px;
+  background: blue;
+  text-align: center;
+  line-height: 27px;
+  margin-left: 8px;
+}
+.nav-wrap .header ._header a {
+  color: #fff;
+}
+.nav-wrap .header .-header {
+  margin-top: 12px;
+  background: blue;
+  text-align: center;
+  line-height: 27px;
+}
+.nav-wrap .header .-header a {
+  color: #fff;
+}
+.nav-wrap .content {
+  width: 100%;
+  height: 450px;
+}
+.nav-wrap .content .content-left {
+  width: 65%;
+}
+.nav-wrap .content .content-left img {
+  float: left;
+  width: 100%;
+  height: 450px;
+  display: block;
+}
+.nav-wrap .content .content-right {
+  float: right;
+  width: 30%;
+  height: 100%;
+  position: relative;
+  background: url("http://s0.beibaotu.com/files/items/国内景点/云南/大理/洱海风景区/2_800.jpg");
+}
+.nav-wrap .content .content-right .nav {
+  box-sizing: border-box;
+  padding-top:20px;
+  width: 100%;
+}
+.nav-wrap .content .content-right .nav li {
+  float: left;
+  margin: 30px;
+  margin-top: 0;
+  width: 100px;
+}
+.nav-wrap .content .content-right .nav li a {
+  font-size: 25px;
+  color: #000;
+}
+.nav-wrap .content .content-right .nav li a:hover {
+  color: blue;
+  background: #ffffff;
+}
+.nav-wrap .content .content-right .foot {
+  text-align: center;
+  line-height: 20px;
+  display: block;
+  background: blue;
+  width: 100%;
+  height: 35px;
+  position: absolute;
+  bottom: 7px;
+}
+.nav-wrap .content .content-right .foot a {
+  position: absolute;
+  top: 7px;
+  right: 35%;
+  color: white;
+}
+.section {
+  width: 1226px;
+  height: 157px;
+  margin: 10px auto;
+}
+.section .h2 a {
+  font-size: 18px;
+  color: #535352;
+}
+.section .h2 a:hover {
+  color: blue;
+}
+.section ul.list {
+  margin-left:50px;
+  height: 100%;
+}
+.section ul.list li {
+  float: left;
+  position: relative;
+  margin-right: 20px;
+  transform: translateY(10px);
+}
+.section ul.list li span {
+  opacity: 0;
+  display: block;
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  transition: opacity 1s;
+}
+.section ul.list li:hover span {
+  opacity: 1;
+}
+.section ul.list li img {
+  width: 170px;
+  height: 112px;
+  transition: transform 1s;
+}
+.section ul.list img:hover {
+  transform: rotate(5deg);
+}
+h3 {
+  color: #535352;
+  font-size: 20px;
+  padding: 20px 0 20px 60px;
+  width: 125px;
+  font-weight: 400;
+}
+h3:hover {
+  color: green;
+}
+.footer {
+  width: 1226px;
+  margin: 0 auto;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+.footer:hover .preNext span {
+  opacity: 0.5;
+}
+.footer .nav-wrap {
+  height: 100%;
+  width: 100%;
+  background: url("../img/bg_top.png") no-repeat center -100px;
+}
+.footer .footer-div {
+  width: 400%;
+  height: 100%;
+  position: absolute;
+}
+.footer .footer-div .footer-div1 {
+  width: calc(100% / 4);
+  height: 100%;
+  float: left;
+  position: relative;
+}
+.footer .footer-div .footer-div1 p {
+  font-size: 25px;
+  position: absolute;
+  left: 0;
+  top: 100px;
+  right: 0;
+  margin: auto;
+  text-align: center;
+}
+.footer .footer-div .footer-div1 span {
+  font-size: 20px;
+  width: 500px;
+  height: 90px;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 150px;
+  right: 0;
+  margin: auto;
+}
+.footer .preNext span {
+  position: absolute;
+  top: 50%;
+  font-size: 40px;
+  opacity: 0;
+  background-color: gray;
+  transform: translateY(-50%);
+}
+.footer .preNext span:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+.footer .preNext span:nth-child(2) {
+  right: 0;
+}
